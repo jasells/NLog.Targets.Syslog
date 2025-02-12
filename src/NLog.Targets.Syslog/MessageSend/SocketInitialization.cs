@@ -26,7 +26,9 @@ namespace NLog.Targets.Syslog.MessageSend
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
                 ||
                 rt.ToLower().Contains("linux"))
+            {
                 return new SocketInitializationForLinux();
+            }
 
             return new SocketInitializationForOsx();
         }
