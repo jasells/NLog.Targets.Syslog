@@ -1,5 +1,6 @@
-[![NuGet](https://buildstats.info/nuget/Nlog.Targets.Syslog)](https://www.nuget.org/packages/NLog.Targets.Syslog)
-[![Build](https://github.com/luigiberrettini/NLog.Targets.Syslog/actions/workflows/pipeline.yml/badge.svg)](https://github.com/luigiberrettini/NLog.Targets.Syslog/actions/workflows/pipeline.yml)
+[![NuGet](https://buildstats.info/nuget/XDev.Nlog.Targets.Syslog)](https://www.nuget.org/packages/XDev.NLog.Targets.Syslog)
+
+<!--[![Build](https://github.com/luigiberrettini/NLog.Targets.Syslog/actions/workflows/pipeline.yml/badge.svg)](https://github.com/luigiberrettini/NLog.Targets.Syslog/actions/workflows/pipeline.yml)-->
 
 Syslog target for NLog
 ======================
