@@ -1,0 +1,25 @@
+/// ***********************************************************************************
+/// **  The Release Pipeline will use this file to auto-version and track releases.  **
+/// ***********************************************************************************
+
+/// <summary>
+/// Specifies the name of the package to release.
+/// This tag and value is required.
+/// </summary>
+/// <example>
+/// [Package Name]
+/// My.Package
+/// </example>
+[Package Name]
+XDev.NLog.Targets.Syslog
+
+/// <summary>
+/// Specifies the 3 octet version of the release.  This is the versioning schema used by Nuget.
+/// This tag and value is required.
+/// </summary>
+/// <example>
+/// [Release Version]
+/// 1.2.3
+/// </example>
+[Release Version]
+8.0.0

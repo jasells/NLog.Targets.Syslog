@@ -5,16 +5,31 @@ using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using NLog.Targets.Syslog.Settings;
 
+using Debug = System.Diagnostics.Debug;
+
 namespace NLog.Targets.Syslog.MessageSend
 {
     internal abstract class SocketInitialization
     {
         public static SocketInitialization ForCurrentOs()
         {
+            string rt = RuntimeInformation.OSDescription;
+
+            bool isMac = RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
+
+            Debug.WriteLine($"===== NLog.Targets.Syslog detected OS: {rt}");
+            Debug.WriteLine($"isMac: {isMac}");
+
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                 return new SocketInitializationForWindows();
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)
+                ||
+                rt.ToLower().Contains("linux"))
+            {
                 return new SocketInitializationForLinux();
+            }
+
             return new SocketInitializationForOsx();
         }
 

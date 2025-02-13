@@ -1,6 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{37F84F7C-A60C-4FCE-A629-8D6829777961}"
 	ProjectSection(SolutionItems) = preProject
+		Build-Info.txt = Build-Info.txt
 		..\LICENSE = ..\LICENSE
 	EndProjectSection
 EndProject
@@ -72,6 +76,12 @@ Global
 		{48481129-C37F-4F9B-82FC-2A467FC6EC81}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48481129-C37F-4F9B-82FC-2A467FC6EC81}.ReleaseCrossPlatform|Any CPU.ActiveCfg = Release|Any CPU
 		{48481129-C37F-4F9B-82FC-2A467FC6EC81}.ReleaseCrossPlatform|Any CPU.Build.0 = Release|Any CPU
+		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.ReleaseCrossPlatform|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.ReleaseCrossPlatform|Any CPU.Build.0 = Release|Any CPU
 		{FEDBC211-287E-4D64-B111-594D1CB7C54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FEDBC211-287E-4D64-B111-594D1CB7C54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEDBC211-287E-4D64-B111-594D1CB7C54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -83,12 +93,6 @@ Global
 		{1321F38E-8905-49B7-8D9A-4ECDD85253FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1321F38E-8905-49B7-8D9A-4ECDD85253FF}.ReleaseCrossPlatform|Any CPU.ActiveCfg = Release|Any CPU
 		{1321F38E-8905-49B7-8D9A-4ECDD85253FF}.ReleaseCrossPlatform|Any CPU.Build.0 = Release|Any CPU
-		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.ReleaseCrossPlatform|Any CPU.ActiveCfg = Release|Any CPU
-		{7C0389AC-BC08-4C76-97CA-8FC405BDC53A}.ReleaseCrossPlatform|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

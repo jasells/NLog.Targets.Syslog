@@ -1,21 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>NLog.Targets.Syslog</RootNamespace>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <OutputType>Library</OutputType>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>false</Deterministic>
+    <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>false</ContinuousIntegrationBuild>
 
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>NLog.Targets.Syslog.snk</AssemblyOriginatorKeyFile>
-    <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
 
-    <Product>NLog.Targets.Syslog</Product>
-    <Copyright>Copyright © 2013 - present by Luigi Berrettini and others: https://github.com/luigiberrettini/NLog.Targets.Syslog/graphs/contributors</Copyright>
+    <Product>XDev.NLog.Targets.Syslog</Product>
     <AssemblyTitle>NLog Syslog target</AssemblyTitle>
     <AssemblyName>NLog.Targets.Syslog</AssemblyName>
     <AssemblyVersion>0.0.0.0</AssemblyVersion>
@@ -23,38 +19,49 @@
     <InformationalVersion>0.1.0-alpha.1+commitHash</InformationalVersion>
     <NeutralLanguage>en</NeutralLanguage>
 
-    <Company>Luigi Berrettini</Company>
-    <Authors>Luigi Berrettini</Authors>
-    <PackageId>NLog.Targets.Syslog</PackageId>
-    <Title>NLog.Targets.Syslog</Title>
-    <Description>Custom target for NLog to send logging messages to a Syslog server</Description>
-    <PackageTags>NLog Syslog Log Logging</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <Company>XDev</Company>
+    <Authors>XDev</Authors>
+    <PackageId>XDev.NLog.Targets.Syslog</PackageId>
+    <Title>XDev.NLog.Targets.Syslog</Title>
+    <Description>
+      Custom target for NLog to send logging messages to a Syslog server.
+      Forked from https://github.com/luigiberrettini/NLog.Targets.Syslog and namespace-compatible.
+    </Description>
+    <PackageTags>NLog Syslog Log Logging Maui</PackageTags>
     <Version>0.1.0-alpha.1</Version>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/luigiberrettini/NLog.Targets.Syslog</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/jasells/NLog.Targets.Syslog</PackageProjectUrl>
     <PackageIcon>NLog.Targets.Syslog.png</PackageIcon>
-    <RepositoryUrl>https://github.com/luigiberrettini/NLog.Targets.Syslog</RepositoryUrl>
-    <PackageReleaseNotes>https://github.com/luigiberrettini/NLog.Targets.Syslog/releases/tag/v0.1.0-alpha.1</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/jasells/NLog.Targets.Syslog</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageReleaseNotes>
+      Forked to update support for Xamarin.Android and Maui 8+ apps.
+      Remove d .Net6 target, as any .Net6+ app codebase can consume .netstandard2.0, and thus the his package is smaller.
+    </PackageReleaseNotes>
     <RepositoryType>Git</RepositoryType>
 
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <DebugType>portable</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <!--<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>-->
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <PackageReference Include="NLog" Version="5.0.0" />
     <PackageReference Include="Polly.Contrib.WaitAndRetry" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="True" PackagePath="" />
     <None Include="..\NLog.Targets.Syslog.png" Pack="true" PackagePath="" />
-    <None Include="NLog.Targets.Syslog.snk" />
+    <Content Include="bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).pdb" PackagePath="lib\$(TargetFramework)\$(AssemblyName).pdb">
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+    </Content>
+    <!--<None Include="NLog.Targets.Syslog.snk" />-->
   </ItemGroup>
 </Project>
