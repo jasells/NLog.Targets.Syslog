@@ -38,7 +38,8 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageReleaseNotes>
       Forked to update support for Xamarin.Android and Maui 8+ apps.
-      Remove d .Net6 target, as any .Net6+ app codebase can consume .netstandard2.0, and thus the his package is smaller.
+      Removed .Net6 target, as any .Net6+ app codebase can consume .netstandard2.0, and thus this package is smaller.
+      Packed symbols to support SourceLink. 
     </PackageReleaseNotes>
     <RepositoryType>Git</RepositoryType>
 
